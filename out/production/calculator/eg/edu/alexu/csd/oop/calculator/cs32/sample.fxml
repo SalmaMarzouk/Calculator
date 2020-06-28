@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:controller="eg.edu.alexu.csd.oop.calculator.cs32.Controller"
+      style="-fx-background-image: url('img.jpeg');-fx-background-size: stretch;" alignment="CENTER"
+      maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0"
+      xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0">
+            <children>
+                <TextField fx:id="text" onMouseClicked="#clear" minHeight="40" prefWidth="170"/>
+                <Label fx:id="l" alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="257.0" text="" textAlignment="RIGHT">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </Label>
+                <HBox spacing="50">
+                    <GridPane hgap="10.0" vgap="10.0">
+
+                        <children>
+                            <Button fx:id="b1" onMouseClicked="#addToTextField" mnemonicParsing="false" text="1"
+                                    prefWidth="40" prefHeight="40"/>
+                            <Button fx:id="b4" onMouseClicked="#addToTextField" mnemonicParsing="false" text="4"
+                                    prefWidth="40" prefHeight="40" GridPane.rowIndex="1"/>
+                            <Button fx:id="b7" onMouseClicked="#addToTextField" mnemonicParsing="false" text="7"
+                                    prefWidth="40" prefHeight="40" GridPane.rowIndex="2"/>
+                            <Button fx:id="b2" onMouseClicked="#addToTextField" mnemonicParsing="false" text="2"
+                                    prefWidth="40" prefHeight="40" GridPane.columnIndex="1"/>
+                            <Button fx:id="b5" onMouseClicked="#addToTextField" mnemonicParsing="false" text="5"
+                                    prefWidth="40" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            <Button fx:id="b8" onMouseClicked="#addToTextField" mnemonicParsing="false" text="8"
+                                    prefWidth="40" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                            <Button fx:id="b3" onMouseClicked="#addToTextField" mnemonicParsing="false" text="3"
+                                    prefWidth="40" prefHeight="40" GridPane.columnIndex="2"/>
+                            <Button fx:id="b6" onMouseClicked="#addToTextField" mnemonicParsing="false" text="6"
+                                    prefWidth="40" prefHeight="40" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                            <Button fx:id="b9" onMouseClicked="#addToTextField" mnemonicParsing="false" text="9"
+                                    prefWidth="40" prefHeight="40" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                            <Button fx:id="b0" onMouseClicked="#addToTextField" mnemonicParsing="false" text="0"
+                                    prefWidth="40" prefHeight="40" GridPane.rowIndex="3"/>
+                            <Button fx:id="bdot" onMouseClicked="#addToTextField" mnemonicParsing="false" prefWidth="40"
+                                    prefHeight="40" text="." GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                            <Button onMouseClicked="#calculate" mnemonicParsing="false" prefWidth="40" prefHeight="40" text="="
+                                    GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                        </children>
+                        <columnConstraints>
+                            <ColumnConstraints/>
+                            <ColumnConstraints/>
+                            <ColumnConstraints/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints/>
+                            <RowConstraints/>
+                            <RowConstraints/>
+                            <RowConstraints/>
+                        </rowConstraints>
+                    </GridPane>
+                    <VBox spacing="10">
+                        <Button onMouseClicked="#addToTextField" mnemonicParsing="false" text="+" prefWidth="70" minHeight="40"/>
+                        <Button onMouseClicked="#addToTextField" mnemonicParsing="false" text="-" prefWidth="70" minHeight="40"/>
+                        <Button onMouseClicked="#addToTextField" mnemonicParsing="false" text="*" prefWidth="70" minHeight="40"/>
+                        <Button onMouseClicked="#addToTextField" mnemonicParsing="false" text="/" prefWidth="70" minHeight="40"/>
+                    </VBox>
+                </HBox>
+                <VBox alignment="CENTER" spacing="50.0">
+                    <children>
+                        <HBox spacing="20.0">
+                            <children>
+                                <Button fx:id="prev" disable="true" onMouseClicked="#getPrev" mnemonicParsing="false" text="Previous"/>
+                                <Button fx:id="next" disable="true" onMouseClicked="#getNext" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Next"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                            <children>
+                                <Button onMouseClicked="#save" mnemonicParsing="false" text="Save" prefWidth="70"/>
+                                <Button onMouseClicked="#load" mnemonicParsing="false" text="Load" prefWidth="70"/>
+                                <Button mnemonicParsing="false" text="Info" prefWidth="70"/>
+                                <Button onMouseClicked="#exit" mnemonicParsing="false" text="Exit" prefWidth="70"/>
+                            </children>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0"/>
+                    </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+
+    </children>
+    <padding>
+        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0"/>
+    </padding>
+</HBox>
